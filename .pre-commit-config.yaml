@@ -2,7 +2,7 @@ repos:
 
 
 -   repo: https://github.com/pre-commit/mirrors-autopep8
-    rev: master
+    rev: 899e94f055b271ea3b1fb787b2fa040afa54bc76  # frozen: v2.0.4
     hooks:
     - id: autopep8
       description: "Applies a subset of autopep8's fixes to Python code"
@@ -18,23 +18,23 @@ repos:
       - W292,E502,E266,E402,E713,E714,E721,E722,E731
 
 
--   repo: https://github.com/ambv/black
-    rev: stable
+-   repo: https://github.com/psf/black
+    rev: 1b2427a2b785cc4aac97c19bb4b9a0de063f9547  # frozen: 24.10.0
     hooks:
     -   id: black
         description: "Runs black over Python code"
-        args: ["--py36", "-l", "100", "-N"]
+        args: ["--target-version", "py36", "-l", "100"]
 
 
--   repo: https://github.com/pre-commit/mirrors-isort
-    rev: master
+-   repo: https://github.com/PyCQA/isort
+    rev: c8ab4a5b21bac924d106e3103dd7c979fdd0f9bc  # frozen: 6.0.1
     hooks:
     -   id: isort
         description: "Runs isort over Python code"
 
 
--   repo: https://github.com/myint/docformatter
-    rev: master
+-   repo: https://github.com/PyCQA/docformatter
+    rev: e73b8ba0c1316be565983236c72e653ad44e6b66  # frozen: v1.7.7
     hooks:
     -   id: docformatter
         name: docformatter
@@ -43,8 +43,8 @@ repos:
         language: python
 
 
--   repo: git://github.com/chewse/pre-commit-mirrors-pydocstyle
-    sha: master
+-   repo: https://github.com/PyCQA/pydocstyle
+    rev: 07f6707e2c5612960347f7c00125620457f490a7  # frozen: 6.3.0
     hooks:
     -   id: pydocstyle
         name: pydocstyle
@@ -58,8 +58,8 @@ repos:
         args: ["-e", "--convention=numpy", "--add-ignore", "D100,D101,D102,D103,D104,D105,D106,D107"]
 
 
--   repo: https://github.com/humitos/mirrors-autoflake
-    rev: master
+-   repo: https://github.com/PyCQA/autoflake
+    rev: 0544741e2b4a22b472d9d93e37d4ea9153820bb1  # frozen: v2.3.1
     hooks:
     - id: autoflake
       name: autoflake
@@ -72,7 +72,7 @@ repos:
 
 
 -   repo: https://github.com/PyCQA/flake8
-    rev: master
+    rev: cf1542cefa3e766670b2066dd75c4571d682a649  # frozen: 7.1.1
     hooks:
     - id: flake8
       name: flake8
@@ -94,7 +94,7 @@ repos:
 
 
 -   repo: https://github.com/pre-commit/mirrors-mypy
-    rev: master
+    rev: f56614daa94d5cd733d3b7004c5df9caad267b4a  # frozen: v1.13.0
     hooks:
     - id: mypy
       description: "Runs mypy over Python code"
@@ -108,6 +108,6 @@ repos:
 
 
 -   repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v2.1.0
+    rev: cef0300fd0fc4d2a87a85fa2093c6b283ea36f4b  # frozen: v5.0.0
     hooks:
     -   id: check-json
